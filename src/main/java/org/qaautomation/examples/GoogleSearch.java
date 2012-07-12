@@ -1,14 +1,7 @@
 package org.qaautomation.examples;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Search Google example.
@@ -19,7 +12,7 @@ public class GoogleSearch {
     static WebDriver driver;
     static Wait<WebDriver> wait;
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         driver = new FirefoxDriver();
         wait = new WebDriverWait(driver, 30);
         driver.get("http://192.168.32.42:8080/audit/");
@@ -79,5 +72,5 @@ public class GoogleSearch {
 
         // Look for QAAutomation.net in the results
         return driver.findElement(By.tagName("body")).getText().contains("qaautomation.net");
-    }
+    }*/
 }
