@@ -1,4 +1,4 @@
-package com.qaautomation.examples;
+package org.qaautomation.examples;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
