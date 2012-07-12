@@ -8,12 +8,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
-
 public class Selenium2Example {
 
     @Test
     public void google() throws Exception {
+
+        //hello
 
         // Create a new instance of the Firefox driver
         // Notice that the remainder of the code relies on the interface,
