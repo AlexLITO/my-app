@@ -3,11 +3,14 @@
 #################
 
 *.pydevproject
+target/
+.idea
 .project
 .metadata
 bin/
 tmp/
 *.tmp
+*.iml
 *.bak
 *.swp
 *~.nib
