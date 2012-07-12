@@ -8,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class Selenium2Example {
 
     @Test
@@ -22,7 +24,33 @@ public class Selenium2Example {
         driver.get("http://www.google.com");
         // Alternatively the same thing can be done like this
         // driver.navigate().to("http://www.google.com");
-
+        WebElement FCMButton= driver.findElement(By.id("j_idt9:j_idt17"));
+        FCMButton.click();
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return d.getTitle().toLowerCase().startsWith("cheese!");
+            }
+        });
+        WebElement ANFCButton = driver.findElement(By.id("j_idt24:j_idt25"));
+        ANFCButton.click();
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return d.getTitle().toLowerCase().startsWith("cheese!");
+            }
+        });
+        WebElement FilterNameField = driver.findElement(By.id("filteringCriterion:filterName"));
+        FilterNameField.sendKeys("AlexLITO");
+        WebElement ExpressionField = driver.findElement(By.id("filteringCriterion:j_idt31"));
+        ExpressionField.sendKeys("AlexLITO and Zebra");
+        WebElement TestFilterXMLField = driver.findElement(By.id("filteringCriterion:testFilterXml"));
+        TestFilterXMLField.sendKeys("123321");
+        WebElement SaveButton = driver.findElement(By.id("filteringCriterion:j_idt36"));
+        SaveButton.click();
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return d.getTitle().toLowerCase().startsWith("cheese!");
+            }
+        });
         // Find the text input element by its name
         WebElement element = driver.findElement(By.name("q"));
 
@@ -49,4 +77,6 @@ public class Selenium2Example {
         //Close the browser
         driver.quit();
     }
+
+
 }
